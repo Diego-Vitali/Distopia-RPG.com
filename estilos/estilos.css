@@ -140,6 +140,7 @@ p{
 }
 
 .container{
+    display: block;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -158,4 +159,63 @@ p{
 }
 .descricao p{
     text-align: center;
+}
+
+.containerPC{
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: rgba(57, 56, 56, 0.8);
+    border-radius: 15px;
+}
+
+.containerPC h2{
+    padding-top: 10px;
+    padding-left: 2%;
+    text-align: center;
+    color: rgb(255, 208, 208);
+}
+
+.containerPC img{
+    width: 90%;
+    border-radius: 50px;
+    padding-bottom: 20px;
+}
+
+.containerPC .descricao{
+    width: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.8rem;
+    text-align:start;
+}
+
+.containerPC .descricao p{
+    font-size: 2.0rem;
+    
+}
+
+
+
+
+
+@media (min-width: 790px){
+
+    .container{
+        display: none;
+    }
+
+    .containerPC{
+        display: block;
+    }
+
+    #introducao{
+        font-size: 2.0rem;
+        line-height: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
