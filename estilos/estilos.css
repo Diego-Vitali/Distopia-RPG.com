@@ -56,7 +56,7 @@ header ul li a{
 }
 
 header ul li a:hover{
-    background-color: rgba(68, 63, 63, 0.5);
+    background-color: rgba(200, 190, 190, 0.5);
     border-radius: 80px;
 }
 
@@ -78,7 +78,7 @@ header ul li ul li{
 }
 
 header ul li ul li a:hover{
-    background-color: rgba(68, 63, 63, 0.5);
+    background-color: rgba(200, 190, 190, 0.5);
     border-radius: 0;
 }
 
@@ -184,14 +184,13 @@ p{
 }
 
 .players.displayed{
+    display: block;
     z-index: 0;
     opacity: 1;
     transform: translateY(0);
-    display: block;
 }
 
 .players .content{
-    transition: 0.8s;
     border-top: solid;
     margin: 20px;
     padding-bottom: 20px;
@@ -238,6 +237,25 @@ p{
     background-color: rgba(255, 105, 105, 0.847);
 }
 
+.slidGuia p{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    border: solid 1px lrgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+    font-size: 0px;
+    margin-bottom: 20px;
+    margin-inline: 5px;
+}
+
+.slidGuia p.guiaAtual{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    transition:ease-in 0.2s;
+}
+
 /* ---------------VERSÃO PC--------------- */
 .containerPC{
     box-sizing: border-box;
@@ -274,9 +292,28 @@ p{
 
 .containerPC .descricao p{
     font-size: 2.0rem;
-    
 }
 
+.containerPC .slider{
+    padding-top: 50px;
+    width: 60%;
+    margin: auto;
+}
+
+.containerPC .slider img{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 40%;
+}
+
+.containerPC .slider p{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.containerPC .slider .slidGuia p{
+    font-size: 0rem;
+}
 @media (min-width: 950px){
 
     .container{
