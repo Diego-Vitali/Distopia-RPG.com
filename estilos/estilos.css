@@ -1,11 +1,10 @@
 html{
-    display: table;
-    background-repeat: no-repeat;
+    display:table;
+    background-repeat: repeat;
     width: 100%;
     height: 100vh;
     padding: 100px 0;
     background-size: cover;
-    /*background: linear-gradient(180deg, rgba(0,0,0,0.5) 50%, rgb(68, 8, 8) 100%)*/;
     background-image: url('../imagens/Fundo.png');
 
 }
@@ -19,9 +18,11 @@ body{
 }
 
 header{
-    text-align: center;
-    align-content: center;
-    position: fixed;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    position:fixed;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -50,6 +51,8 @@ header ul li a{
     text-decoration: none;
     padding: 20px 20px;
     display: flex;
+    transition: .5s;
+    cursor: pointer;
 }
 
 header ul li a:hover{
@@ -66,7 +69,7 @@ header ul li ul{
 }
 
 header ul li:hover ul{
-    display: block;
+    display:block;
 }
 
 header ul li ul li{
@@ -79,16 +82,21 @@ header ul li ul li a:hover{
     border-radius: 0;
 }
 
-#inicio{
+.inicio{
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#introducao{
+.introducao{   
     margin-bottom: 0;
     text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8);
     border-top: 3px solid rgba(255, 255, 255, 0.5);
     border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.introducao h3{
+    font-size: 2.0rem;
+    flex-wrap: nowrap;
 }
 
 h2{
@@ -128,7 +136,7 @@ p{
 .container h2{
     padding-top: 10px;
     padding-left: 2%;
-    text-align: start;
+    text-align: center;
     color: rgb(255, 208, 208);
 }
 
@@ -140,6 +148,7 @@ p{
 }
 
 .container{
+    box-sizing: border-box;
     display: block;
     padding-left: 20px;
     padding-right: 20px;
@@ -147,7 +156,7 @@ p{
     margin: auto;
     margin-left: 1%;
     margin-right: 1%;
-    background-color: rgba(57, 56, 56, 0.8);
+    background-color: rgba(255, 250, 250, 0.2);
     border-radius: 15px;
 }
 .descricao{
@@ -161,7 +170,77 @@ p{
     text-align: center;
 }
 
+.slider{
+    margin: 20px;
+}
+
+.players{
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.players.displayed{
+    z-index: 0;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.players .content{
+    transition: 0.8s;
+    border-top: solid;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.players .content p{
+    text-align: justify;
+    font-size: medium;
+}
+
+.players img{
+    margin-top: 20px;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 60%;
+}
+
+.slider_btns{
+    width: 100%;
+    align-items: center;
+}
+
+.slider_btns button{
+    margin:10px;
+    border-radius: 50%;
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: rgba(255, 255, 255, 0.356);
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.slider_btns button:hover{
+    background-color: #ffffff86;
+    color: #000;
+    transition: .5s;
+}
+
+.slider_btns button:active{
+    transition: 0.1s;
+    background-color: rgba(255, 105, 105, 0.847);
+}
+
+/* ---------------VERSÃO PC--------------- */
 .containerPC{
+    box-sizing: border-box;
     display: none;
     padding-left: 20px;
     padding-right: 20px;
@@ -198,11 +277,7 @@ p{
     
 }
 
-
-
-
-
-@media (min-width: 790px){
+@media (min-width: 950px){
 
     .container{
         display: none;
@@ -212,10 +287,11 @@ p{
         display: block;
     }
 
-    #introducao{
+    .introducao{
         font-size: 2.0rem;
         line-height: 1.5rem;
         margin-left: 0;
         margin-right: 0;
     }
+
 }

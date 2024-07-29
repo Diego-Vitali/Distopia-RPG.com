@@ -2,12 +2,15 @@
 <html lang="pt-br">
 <head>
 <!-- BASE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5">
     <title>Distopia</title>
-    <link rel="stylesheet" type="text/css" href="./estilos/estilos.css">
 
-<!-- FONTES -->
+    <link rel="stylesheet" type="text/css" href="./estilos/estilos.css">
+    <link rel="icon" href="imagens/Simbolo Maior.png">
+    <script src="script/script.js"></script>
+    <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
@@ -17,14 +20,14 @@
 <body>
     <header>
         <ul>
-            <li><a href="#">Introdução</a>
+            <li><a>Introdução</a>
                 <ul>
-                    <li><a href="#oquee">O Que é?</a></li>
-                    <li><a href="#comosurgiu">Como surgiu?</a></li>
-                    <li><a href="#">Jogadores</a></li>
+                    <li><a href="#" id="linkoquee">O Que é?</a></li>
+                    <li><a href="#" id="linkcomosurgiu">Como surgiu?</a></li>
+                    <li><a href="#" id="linkjogadores">Jogadores</a></li>
                 </ul>
             </li>
-            <li><a href="#" >Universo</a>
+            <li><a>Universo</a>
                 <ul>
                     <li><a href="#">Mapa e Locais</a></li>
                     <li><a href="#">Organizações</a></li>
@@ -34,11 +37,11 @@
             <li><a href="https://ordemparanormal.com.br/" >Ordem Paranormal RPG</a></li>
         </ul>
     </header>
-    <div id="inicio">
+    <div class="inicio">
     <h2>Sejam bem-vindos à</h2>
     <h1>DISTOPIA</h1>
     </div>
-        <div id="introducao">
+        <div class="introducao">
             <h3>Fantasmas e monstros existem.</h3>
             <h3>Foram nossos próprios Medos que os criaram.</h3>
         </div>
@@ -86,11 +89,57 @@
         </div>
         <div class="container" id="jogadores">
             <h2>Jogadores</h2>
+            <div class="slider">
+                <div class="players displayed">
+                    <img id="ImagemSlide" src="imagens/diego.png" alt="Diego Vitali" title="Diego Vitali">
+                    <p>Diego Vitali</p>
+                    <div class="content">
+                        <p>Diego Vitali, de 19 anos, é um grande fã de RPGs de Mesa, mundos fantásticos e pós-apocalípticos. Inspirado pelo universo de Ordem Paranormal, decidiu criar o seu próprio, como uma extensão do univero original criado por Cellbit.</p>
+                        <p>Em Distopia RPG, ele atua como narrador, gerindo e atuando todo o mundo de criaturas, personagens e acontecimentos.</p>
+                    </div>
+                </div>
+                <div class="players">
+                    <img id="ImagemSlide" src="imagens/Abner.png" alt="Abner Augusto" title="Abner Augusto">
+                    <p>Abner Augusto</p>
+                    <div class="content">
+                        <p>Diego Vitali, de 19 anos, é um grande fã de RPGs de Mesa, mundos fantásticos e pós-apocalípticos. Inspirado pelo universo de Ordem Paranormal, decidiu criar o seu próprio, como uma extensão do univero original criado por Cellbit.</p>
+                        <p>Em Distopia RPG, ele atua como narrador, gerindo e atuando todo o mundo de criaturas, personagens e acontecimentos.</p>
+                    </div>
+                </div>
+                <div class="players">
+                    <img id="ImagemSlide" src="imagens/Bea.png" alt="Beatriz Mayara" title="Beatriz Mayara">
+                    <p>Beatriz Mayara</p>
+                    <div class="content">
+                        <p>Diego Vitali, de 19 anos, é um grande fã de RPGs de Mesa, mundos fantásticos e pós-apocalípticos. Inspirado pelo universo de Ordem Paranormal, decidiu criar o seu próprio, como uma extensão do univero original criado por Cellbit.</p>
+                        <p>Em Distopia RPG, ele atua como narrador, gerindo e atuando todo o mundo de criaturas, personagens e acontecimentos.</p>
+                    </div>
+                </div>
+                <div class="players">
+                    <img id="ImagemSlide" src="imagens/Ester.png" alt="Ester França" title="Ester França">
+                    <p>Ester França</p>
+                    <div class="content">
+                        <p>Diego Vitali, de 19 anos, é um grande fã de RPGs de Mesa, mundos fantásticos e pós-apocalípticos. Inspirado pelo universo de Ordem Paranormal, decidiu criar o seu próprio, como uma extensão do univero original criado por Cellbit.</p>
+                        <p>Em Distopia RPG, ele atua como narrador, gerindo e atuando todo o mundo de criaturas, personagens e acontecimentos.</p>
+                    </div>
+                </div>
+                <div class="players">
+                    <img id="ImagemSlide" src="imagens/Gika.png" alt="Gika" title="Gika">
+                    <p>Giovanna "Gika" Nunes</p>
+                    <div class="content">
+                        <p>Diego Vitali, de 19 anos, é um grande fã de RPGs de Mesa, mundos fantásticos e pós-apocalípticos. Inspirado pelo universo de Ordem Paranormal, decidiu criar o seu próprio, como uma extensão do univero original criado por Cellbit.</p>
+                        <p>Em Distopia RPG, ele atua como narrador, gerindo e atuando todo o mundo de criaturas, personagens e acontecimentos.</p>
+                    </div>
+                </div>
+            <div class="slider_btns">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
         </div>
+    </div>
         
 
 <!------------------------- RESPONSIVIDADE PARA MONITOR ------------------------->
-        <div class="containerPC" id="oquee">
+        <div class="containerPC parte1" id="oqueepc">
             <h2>O que é?</h2>
             <table>
                 <tr>
@@ -109,7 +158,7 @@
                 </tr>
             </table>
         </div>
-        <div class="containerPC" id="comosurgiu">
+        <div class="containerPC" id="comosurgiupc">
             <h2>Como surgiu?</h2>
             <table>
                 <tr>
@@ -125,8 +174,22 @@
                     <td>
                         <img src="imagens/Distopia Logo.png" alt="Logo Original do Distopia" title="Logo Original do Distopia">
                     </td>
-                </tr>
-            </table>
+                </table>
         </div>
+        <div class="containerPC" id="jogadorespc">
+            <h2>Jogadores</h2>
+            <div class="players">
+                <img id="ImagemSlide" src="imagens/diego.png" alt="Diego Vitali" title="Diego Vitali">
+                <div class="content">
+                    <p>Diego Vitali, de 19 anos, é um grande fã de RPGs de Mesa, mundos fantásticos e pós-apocalípticos. Inspirado pelo universo de Ordem Paranormal, decidiu criar o seu próprio, como uma extensão do univero original criado por Cellbit.</p>
+                    <p>Em Distopia RPG, ele atua como narrador, gerindo e atuando todo o mundo de criaturas, personagens e acontecimentos.</p>
+                </div>
+            </div>
+            <div class="slider_btns">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+
 </body>
 </html>
