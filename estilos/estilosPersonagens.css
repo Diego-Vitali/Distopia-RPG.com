@@ -18,21 +18,18 @@ body{
 }
 
 header{
-    z-index: 1;
-    box-sizing: border-box;
-    display: flex;
-    position:fixed;
-    justify-content: center;
+    position: fixed;
+    margin: 0;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
-    padding-bottom: 5px;
+    justify-content: space-around;
     background-color: rgba(0,0,0,0.8);
+    padding-bottom: 8px;
 }
 
 header ul{
-    margin-top: 5px;
-    margin-bottom: 5px;
     position: relative;
     text-align: center;
     list-style: none;
@@ -40,31 +37,37 @@ header ul{
 
 header ul li{
     position: relative;
-    float: left;
+    float: inline-start;
 }
 
 header ul li a{
     text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8);
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: white;
     font-weight: 600;
     text-decoration: none;
-    padding: 20px 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-right: solid white 1px;
     display: flex;
     transition: .5s;
     cursor: pointer;
 }
+header ul li a:last-child{
+    border-right: 0;
+}
 
 header ul li a:hover{
     background-color: rgba(200, 190, 190, 0.5);
-    border-radius: 80px;
+    width: 100%;
 }
 
 header ul li ul{
     position: absolute;
     padding-left: 0;
-    width: 225px;
+    width:150%;
     display: none;
+    text-align: start;
     background-color: rgba(0,0,0,0.8);   
 }
 
@@ -80,4 +83,259 @@ header ul li ul li{
 header ul li ul li a:hover{
     background-color: rgba(200, 190, 190, 0.5);
     border-radius: 0;
+    width: 150%;
+}
+
+.container{
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgba(255, 250, 250, 0.2);
+    border-radius: 15px;
+}
+
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8);
+    padding-top: 10px;
+    padding-left: 2%;
+    text-align: center;
+    color: rgb(255, 208, 208);
+}
+h1{
+    margin-top: 0;
+    font-size: 4rem;
+    font-family: "Girassol", serif;
+    font-weight: 800;
+    letter-spacing: 1rem;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 20px rgba(224, 0, 0, 0.9);
+}
+
+h4{
+    font-size: 1rem;
+}
+
+strong{
+    font-size: 2rem;
+    font-style: italic;
+    text-shadow: 2px 2px 7px white;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.protagonistas{
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.protagonistas h2{
+    margin: 0%;
+    padding: 0px 0px 20px 0px;
+    border-bottom: solid white 2px;
+}
+
+.protagonistas table{
+    border-spacing: 20px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.protagonistas table tr td img{
+    filter: grayscale(80%);
+    border-radius: 50%;
+    width: 100%;
+    border: solid 2px white;
+}
+
+.protagonistas table tr td img:hover{
+    filter: grayscale(0%);
+    transform: translateX(-2%);
+    width: 105%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.protagonistas table tr td p{
+    text-align: center;
+    font-size: medium;
+}
+
+.info{
+    animation: fadeIn 0.5s;
+    display: none;
+    margin: 20px 20px 20px 20px;
+	top: 5%;  
+	left: 0;
+    max-width: 90%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6); 
+	z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+.info .fechar{
+    margin-top: 5px;
+    padding-right: 0;
+    padding-left: 0;
+    transform: translate(43%, 10px);
+    width:32px;
+    padding-bottom: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    height: fit-content;
+}
+
+.info .fechar:hover{
+    background-color: #ffffff86;
+    color: #000;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.info .fechar p{
+    font-size: 1.2rem;
+    border-top: 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 1000;
+    letter-spacing: normal;
+}
+
+.info img{
+    width: 80%;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: white 0px 0px 15px;
+}
+
+.info p{
+    border-top: solid white 1px;
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: medium;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: small;
+}
+
+.info.show{
+    display: block;
+}
+@media (max-width: 399px){
+    header ul li a{
+        font-size: 0.95rem;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media (min-width: 775px){
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header ul{
+        justify-content: center;
+        text-align: center;
+    }
+    header ul li a{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 0;
+        font-size: 2rem;
+    }
+    header ul li a:hover{
+        background-color: rgba(200, 190, 190, 0.5);
+        width: fit-content;
+    }
+
+    header ul li ul li{
+        padding: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    header ul li ul li:hover{
+        width: 55%;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+
+    .protagonistas{
+        width: 50%;
+        height: fit-content;
+    }
+
+    .protagonistas table tr td img{
+        width: 60%;
+    }
+    .protagonistas table tr td img:hover{
+        width: 65%;
+        transform: translateX(0%) translateY(0%);
+        margin-bottom: 5px;
+    }
+    .protagonistas table tr td{
+        padding: 0;
+        margin: 0;
+    }
+    .protagonistas table tr td p{
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    .info{
+        margin: 2% 0% 0% 20%;
+        width: 60%;
+        height: max-content;
+        animation: fadeInPC 0.4s;
+    }
+
+    .info img{
+        width: 50%;
+    }
+    .info p{
+        font-size: 1.5rem;
+    }
+    @keyframes fadeInPC{
+        from{
+            opacity: 0;
+        }
+        to{  
+            opacity: 1;
+        }
+}
+}
+@keyframes fadeIn{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{  
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

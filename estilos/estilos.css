@@ -18,21 +18,17 @@ body{
 }
 
 header{
+    position: fixed;
     z-index: 1;
-    box-sizing: border-box;
-    display: flex;
-    position:fixed;
-    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
-    padding-bottom: 5px;
+    justify-content: space-around;
     background-color: rgba(0,0,0,0.8);
+    padding-bottom: 8px;
 }
 
 header ul{
-    margin-top: 5px;
-    margin-bottom: 5px;
     position: relative;
     text-align: center;
     list-style: none;
@@ -45,25 +41,30 @@ header ul li{
 
 header ul li a{
     text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8);
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: white;
     font-weight: 600;
     text-decoration: none;
-    padding: 20px 20px;
+    padding: 5px;
+    border-right: solid white 1px;
     display: flex;
     transition: .5s;
     cursor: pointer;
 }
+header ul li a:last-child{
+    border-right: 0;
+}
 
 header ul li a:hover{
     background-color: rgba(200, 190, 190, 0.5);
-    border-radius: 80px;
+    width: max-content;
 }
 
 header ul li ul{
     position: absolute;
     padding-left: 0;
-    width: 225px;
+    width: 150%;
+    padding: 5px;
     display: none;
     background-color: rgba(0,0,0,0.8);   
 }
@@ -73,13 +74,18 @@ header ul li:hover ul{
 }
 
 header ul li ul li{
-    position: relative;
+    float: none;
+}
+
+header ul li ul li:hover{
+    background-color: rgba(200, 190, 190, 0.5);
+    border-radius: 0;
+    transition: 0.8s;
     width: 100%;
 }
 
-header ul li ul li a:hover{
-    background-color: rgba(200, 190, 190, 0.5);
-    border-radius: 0;
+header ul li ul li:hover a:hover{
+    background:none
 }
 
 .inicio{
@@ -95,22 +101,22 @@ header ul li ul li a:hover{
 }
 
 .introducao h3{
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     flex-wrap: nowrap;
 }
 
 h2{
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 0;
     text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8);
 }
 h1{
     margin-top: 0;
-    font-size: 8rem;
+    font-size: 4rem;
     font-family: "Girassol", serif;
     font-weight: 800;
-    letter-spacing: 1.7rem;
+    letter-spacing: 1rem;
     margin-bottom: 0;
     text-shadow: 2px 2px 20px rgba(224, 0, 0, 0.9);
 }
@@ -161,7 +167,7 @@ p{
     width: 40%;
     padding-left: 2%;
     padding-right: 2%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: justify;
 }
 .descricao p{
@@ -185,6 +191,10 @@ p{
     display: block;
     z-index: 0;
     animation: fadeIn 0.3s ease-in;
+}
+
+.players p{
+    font-size: medium;
 }
 
 .players .content{
@@ -213,11 +223,11 @@ p{
 .slider_btns button{
     margin:10px;
     border-radius: 50%;
-    width: 60px;
+    width: 30px;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: rgba(255, 255, 255, 0.356);
-    font-size: 50px;
+    font-size: 28px;
     font-family: monospace;
     font-weight: bold;
     cursor: pointer;
@@ -239,16 +249,16 @@ p{
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     border: solid 1px lrgb(255, 255, 255);
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     font-size: 0px;
     margin-bottom: 20px;
     margin-inline: 5px;
 }
 
 .slidGuia p.guiaAtual{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: rgba(255, 255, 255, 1);
     transition:ease-in 0.2s;
 }
@@ -310,8 +320,20 @@ p{
 .containerPC .slider .slidGuia p{
     font-size: 0rem;
 }
-@media (min-width: 950px){
-
+@media (min-width: 768px){
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header ul{
+        justify-content: center;
+        text-align: center;
+    }
+    header ul li a{
+        font-size: 2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .container{
         display: none;
     }
@@ -327,6 +349,34 @@ p{
         margin-right: 0;
     }
 
+    h1{
+        margin-top: 0;
+        font-size: 8rem;
+        font-family: "Girassol", serif;
+        font-weight: 800;
+        letter-spacing: 1.7rem;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 20px rgba(224, 0, 0, 0.9);
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    .introducao h3{
+        font-size: 2rem;
+        flex-wrap: nowrap;
+    }
+    .descricao{
+        font-size: 1.5rem;
+    }
+    .slider_btns button{
+        width: 60px;
+        font-size: 50px;
+    }
+}
+@media (max-width: 380px){
+    header ul li a{
+        font-size: 0.95rem;
+    }
 }
 @keyframes fadeIn{
     from{
@@ -348,5 +398,7 @@ p{
         transform: translateY(50);
         opacity: 0;
     }
+
+
 }
 
