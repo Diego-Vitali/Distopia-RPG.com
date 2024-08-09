@@ -58,7 +58,7 @@ function ShowInfo(_src, _alt) {
             obj_contInfo.innerHTML = "Um dia, Rudá fora apenas uma professora em um mundo comum, mas as memórias de mais de uma década atrás já se perderam em meio ao caos da Distopia. Hoje, Rudá é uma agente de elite de uma organização derivada da antiga Ordo Realitas. Equipada com seu fuzil de Precisão absoluto, Rudá atravessa a assombrosa névoa da Distopia acompanhada dos ecos de uma ex-vida que se recusa morrer."
         }
         else if(_alt == "Mei-Hui"){
-            obj_contInfo.innerHTML = "Mei-Hui fora uma genial cientista antes da Distopia"
+            obj_contInfo.innerHTML = "Mei-Hui fora uma genial cientista antes da Distopia, tendo uma família feliz e trabalhando em uma grande empresa de desenvolvimento médico e tecnológico. No entanto, a alegria não seria eterna e logo tudo começou a ruir. A chegada da Distopia destruiu seu mundo e sua família e, hoje, Mei-Hui se vê obrigada a continuar avançando em busca daqueles que ama, mesmo que isso signifique se afundar no Medo e no Desconhecido. "
         }
     obj_info.style.display = 'block'
 }

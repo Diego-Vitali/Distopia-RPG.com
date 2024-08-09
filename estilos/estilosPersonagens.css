@@ -15,6 +15,7 @@ body{
     align-items: center;
     text-align: center;
     font-family: "Arsenal SC", sans-serif;
+    overflow:scroll;
 }
 
 header{
@@ -59,7 +60,7 @@ header ul li a:last-child{
 
 header ul li a:hover{
     background-color: rgba(200, 190, 190, 0.5);
-    width: 100%;
+    width: max-content;
 }
 
 header ul li ul{
@@ -121,7 +122,7 @@ h1{
 }
 
 h4{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 strong{
@@ -243,6 +244,81 @@ p{
 .info.show{
     display: block;
 }
+
+.cards{
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.npcs{
+    margin-top: 20px;
+    margin-inline: 0;
+    border-radius: 15px;
+    max-width: 9rem;
+    height: 9rem;
+    background-color: rgba(255, 250, 250, 0.2);
+    float:inline-start;
+    margin-inline: 4px;
+}
+
+.npcs img{
+    transform: translateY(-14%);
+    width: 100%;
+    padding-bottom: 0%;
+}
+
+.descritivo{
+    animation: fadeText ease-in-out 0.5s;
+    transform: translateY(-70%);
+    text-align: justify;
+    margin-top: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 0;
+    display: none;
+}
+
+.npcs:hover{
+    animation: aumentarTam 0.4s;
+    height: 17rem;
+}
+
+.npcs:not(:hover){
+    animation: diminuirTam 0.4s;
+    height: 9rem;
+}
+
+.npcs:hover .descritivo{
+    display: block;
+}
+
+#tokenAntigo img{
+    width: 130%;
+    transform: translateY(10%) translateX(-10%);
+}
+
+#tokenAntigo .descritivo{
+    transform: translateY(-10%);
+}
+
+#tokenAntigo:hover{
+    animation: aumentarTam 0.4s;
+    height: 21rem;
+}
+
+span{
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    border-top: solid 2px white;
+}
+
 @media (max-width: 399px){
     header ul li a{
         font-size: 0.95rem;
@@ -320,12 +396,51 @@ p{
     .info p{
         font-size: 1.5rem;
     }
+    h4{
+        font-size: 1.1rem;
+    }
+    .npcs{
+        max-width: 14rem;
+        height: 14rem;
+    }
+    .npcs:hover{
+        animation: aumentarTamPC 0.4s;
+        height: 24rem;
+    }
+    .npcs:not(:hover){
+        animation: diminuirTamPC 0.4s;
+        height: 14rem;
+    }
+    .descritivo{
+        transform: translateY(-81%);
+    }
+    #tokenAntigo:hover{
+        animation: aumentarTamPC 0.4s;
+        height: 28.6rem;
+    }
     @keyframes fadeInPC{
         from{
             opacity: 0;
         }
         to{  
             opacity: 1;
+        }
+}
+    @keyframes aumentarTamPC {
+        from{
+            height: 14rem;
+        }
+        to{
+            height: 24rem;
+        }
+    }
+
+    @keyframes diminuirTamPC {
+        from{
+            height: 24rem;
+        }
+        to{
+            height: 14rem;
         }
 }
 }
@@ -337,5 +452,32 @@ p{
     to{  
         transform: translateY(0);
         opacity: 1;
+    }
+
+    
+}
+@keyframes fadeText{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes aumentarTam {
+    from{
+        height: 9rem;
+    }
+    to{
+        height: 17rem;
+    }
+  }
+
+@keyframes diminuirTam {
+    from{
+        height: 17rem;
+    }
+    to{
+        height: 9rem;
     }
 }
