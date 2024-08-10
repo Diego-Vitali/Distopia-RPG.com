@@ -284,7 +284,7 @@ p{
 }
 
 .containerPC img{
-    width: 90%;
+    width: 70%;
     border-radius: 50px;
     padding-bottom: 20px;
 }
@@ -321,18 +321,25 @@ p{
     font-size: 0rem;
 }
 @media (min-width: 768px){
-    header{
-        display: flex;
-        justify-content: center;
-    }
-    header ul{
-        justify-content: center;
-        text-align: center;
-    }
     header ul li a{
-        font-size: 2rem;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 0;
+        font-size: 1.5rem;
+    }
+    header ul li a:hover{
+        background-color: rgba(200, 190, 190, 0.5);
+        width: fit-content;
+    }
+
+    header ul li ul li{
+        padding: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    header ul li ul li:hover{
+        width: 100%;
     }
     .container{
         display: none;
@@ -371,6 +378,10 @@ p{
     .slider_btns button{
         width: 60px;
         font-size: 50px;
+    }
+
+    h3{
+        font-size: 1.6rem;
     }
 }
 @media (max-width: 380px){
