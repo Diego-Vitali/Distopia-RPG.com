@@ -308,7 +308,11 @@ p{
 }
 
 #tokenAntigo:hover{
-    animation: aumentarTam 0.4s;
+    animation: aumentarTamv 0.4s;
+    height: 21rem;
+}
+#tokenAntigo:not(:hover){
+    animation: diminuirTamv 0.4s;
     height: 21rem;
 }
 
@@ -415,7 +419,11 @@ span{
         transform: translateY(-81%);
     }
     #tokenAntigo:hover{
-        animation: aumentarTamPC 0.4s;
+        animation: aumentarTamPCv 0.4s;
+        height: 28.6rem;
+    }
+	#tokenAntigo:not(:hover){
+        animation: diminuirTamPCv 0.4s;
         height: 28.6rem;
     }
     @keyframes fadeInPC{
@@ -434,10 +442,27 @@ span{
             height: 24rem;
         }
     }
+	
+    @keyframes aumentarTamPCv {
+        from{
+            height: 14rem;
+        }
+        to{
+            height: 28.6rem;
+        }
+    }
 
-    @keyframes diminuirTamPC {
+    @keyframes diminuirTamPCv {
         from{
             height: 24rem;
+        }
+        to{
+            height: 14rem;
+        }
+}
+    @keyframes diminuirTamPC {
+        from{
+            height: 28.6rem;
         }
         to{
             height: 14rem;
@@ -472,10 +497,26 @@ span{
         height: 17rem;
     }
   }
+@keyframes aumentarTamv {
+    from{
+        height: 9rem;
+    }
+    to{
+        height: 22rem;
+    }
+  }
 
 @keyframes diminuirTam {
     from{
         height: 17rem;
+    }
+    to{
+        height: 9rem;
+    }
+}
+@keyframes diminuirTamv {
+    from{
+        height: 22rem;
     }
     to{
         height: 9rem;
